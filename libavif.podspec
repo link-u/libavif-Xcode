@@ -54,10 +54,10 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
 
   s.subspec 'libdav1d' do |ss|
     ss.dependency 'libavif/core'
-    ss.dependency 'libdav1d', '>= 0.6.0'
+    ss.dependency 'libdav1d'
     ss.source_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
-      'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_ROOT}/libdav1d/dav1d/include',
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libdav1d/libdav1d.xcframework"/**',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
     }
   end
@@ -79,6 +79,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   # hack to fix the header include issue from CocoaPods
   s.prepare_command = <<-CMD
                       sed -i '' 's/\\"rav1e\\/rav1e.h\\"/\\"librav1e\\/rav1e.h\\"/g' './src/codec_rav1e.c' || true
+                      sed -i '' 's/\\"dav1d\\/dav1d.h\\"/\\"/dav1d.h\\"/g' './src/codec_dav1e.c' || true
                       CMD
 
   # default with aom
