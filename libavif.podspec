@@ -26,7 +26,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   s.homepage         = 'https://github.com/joedrago/avif/'
   s.license          = { :type => 'BSD' }
   s.author           = { 'Joe Drago' => 'joedrago@gmail.com' }
-  s.source           = { :git => 'https://github.com/AOMediaCodec/libavif.git' }
+  s.source           = { :git => 'https://github.com/AOMediaCodec/libavif.git', :submodule => trues }
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.7'
