@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libavif'
-  s.version          = 'libdav1d-static'
+  s.version          = '0.8.1'
   s.summary          = 'libavif - Library for encoding and decoding .avif files'
 
 # This description is used to generate tags and improve search results.
