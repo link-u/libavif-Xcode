@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "libdav1d",
-        "repositoryURL": "file:///Users/murakami/libdav1d",
+        "repositoryURL": "git@github.com:link-u/libdav1d-static",
         "state": {
           "branch": null,
           "revision": "a0022dffc16306091f7a7010e862c8fb99a17494",
