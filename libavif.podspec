@@ -57,7 +57,27 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
     ss.dependency 'libdav1d'
     ss.source_files = 'src/codec_dav1d.c'
     ss.pod_target_xcconfig = {
-      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libdav1d/libdav1d.xcframework"/**',
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libdav1d/both/libdav1d.xcframework"/**',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
+    }
+  end
+  
+  s.subspec 'libdav1d-8bit' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'libdav1d/8bit'
+    ss.source_files = 'src/codec_dav1d.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libdav1d/8bit/libdav1d.xcframework"/**',
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
+    }
+  end
+  
+  s.subspec 'libdav1d-16bit' do |ss|
+    ss.dependency 'libavif/core'
+    ss.dependency 'libdav1d/16bit'
+    ss.source_files = 'src/codec_dav1d.c'
+    ss.pod_target_xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libdav1d/16bit/libdav1d.xcframework"/**',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) AVIF_CODEC_DAV1D=1'
     }
   end
