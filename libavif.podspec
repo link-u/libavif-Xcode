@@ -102,7 +102,7 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
                       sed -i '' 's/\\"dav1d\\/dav1d.h\\"/\\"dav1d.h\\"/g' './src/codec_dav1d.c' || true
                       CMD
 
-  # default with aom
+  # default with dav1d
   s.default_subspecs = 'libdav1d-8bit'
   s.preserve_paths = 'src', 'include/avif'
 end
