@@ -103,6 +103,6 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
                       CMD
 
   # default with aom
-  s.default_subspecs = 'libaom'
+  s.default_subspecs = 'libdav1d-8bit'
   s.preserve_paths = 'src', 'include/avif'
 end
