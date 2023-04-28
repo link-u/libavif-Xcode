@@ -24,6 +24,7 @@ let package = Package(
         .target(
             name: "libavif",
             dependencies: ["libdav1d"],
+            path: "src",
             exclude: ["avif/src/codec_aom.c", "avif/src/codec_dav1d.c", "avif/src/codec_rav1e.c", "avif/src/codec_libgav1.c"],
             sources: ["avif/src", "Xcode/codec_dav1d.c"],
             publicHeadersPath: "include",
