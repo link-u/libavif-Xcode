@@ -12,6 +12,7 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "libavif",
+            type: .static,
             targets: ["libavif"]),
     ],
     dependencies: [
@@ -24,9 +25,9 @@ let package = Package(
         .target(
             name: "libavif",
             dependencies: ["libdav1d"],
-            path: "src",
-            exclude: ["avif/src/codec_aom.c", "avif/src/codec_dav1d.c", "avif/src/codec_rav1e.c", "avif/src/codec_libgav1.c"],
-            sources: ["avif/src", "Xcode/codec_dav1d.c"],
+            path: "avif",
+            exclude: ["src/codec_aom.c", "src/codec_dav1d.c", "src/codec_rav1e.c", "src/codec_libgav1.c"],
+            sources: ["src", "Xcode/codec_dav1d.c"],
             publicHeadersPath: "include",
             cSettings: [.define("AVIF_CODEC_DAV1D", to: "1")]
         )
