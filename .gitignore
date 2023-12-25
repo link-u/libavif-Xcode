@@ -68,3 +68,5 @@ iOSInjectionProject/
 # SwiftPM
 .swiftpm
 .build
+Package.resolved
+/.vscode
