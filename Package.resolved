@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "libdav1d",
+        "repositoryURL": "git@github.com:link-u/libdav1d-static",
+        "state": {
+          "branch": null,
+          "revision": "ff43f7cfd41d31c0ab3a831fbb35d994bf136ac3",
+          "version": "0.0.9"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
