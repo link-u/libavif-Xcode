@@ -99,7 +99,6 @@ It is a work-in-progress, but can already encode and decode all AOM supported YU
   # hack to fix the header include issue from CocoaPods
   s.prepare_command = <<-CMD
                       sed -i '' 's/\\"rav1e\\/rav1e.h\\"/\\"librav1e\\/rav1e.h\\"/g' './src/codec_rav1e.c' || true
-                      sed -i '' 's/\\"dav1d\\/dav1d.h\\"/\\"dav1d.h\\"/g' './src/codec_dav1d.c' || true
                       CMD
 
   # default with dav1d
